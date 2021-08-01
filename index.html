@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
 
-    <title>Home :: Crypto Surprice</title>
+    <title>Profile :: Crypto Surprice</title>
 
     <link rel="stylesheet" href="/css/main.css?v2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
@@ -54,35 +54,38 @@
     <script src="/js/ddslick.min.js"></script>
     <script src="/js/main.js"></script>
     
-    <script src="/x_js/home.js" type="text/javascript"></script>
+    <script src="/x_js/profile.js" type="text/javascript"></script>
 
 </head>
 
-<body class="home-page">
+<body class="profile-page">
 
 <div class="wrapper">
 
     <!-- header -->
-            <header class="header">
-            <!-- navbar -->
-            <div class="navbar js-navbar">
+            <header class="profile-header">
+            <!-- profile-header-top -->
+            <div class="profile-header__top">
                 <div class="container">
-                    <div class="navbar__inner">
-                        <!-- logo -->
-                        <a href="/" class="logo header__logo">
-                            <img src="/images/logo.svg" alt="Crypto Surprice" />
+                    <div class="profile-header__top-inner js-navbar">
+
+                        <a class="logo profile-header__logo" href="/">
+                            <img alt="Crypto Surprice" src="/images/logo-white.svg">
                         </a>
-                        <!-- nav-menu -->
-                        <div class="nav-menu js-nav-menu">
-                            <ul class="nav-menu__list js-anchors">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/#about">About us</a></li>
-                                <li><a href="/#statistics">Statistics</a></li>
-                                <li><a href="/#faq">Help</a></li>
-                            </ul>
+
+                        <div class="time profile-header__time js-time">
+                            <div class="time__col">
+                                Start date: 2021-07-31                            </div>
+                            <div class="time__col">
+                                Server time: 2021-08-01 19:40:19                            </div>
+                            <div class="time__col time__telegram">
+                                <a href="https://t.me/joinchat/aOPHJuDvGs42MDgy" target="_blank">
+                                    Telegram channel
+                                </a>
+                            </div>
                         </div>
-                        <!-- language -->
-                        <div class="lang header__lang js-lang">
+
+                        <div class="lang profile-header__lang js-lang">
                             <div class="lang__dropbtn js-lang-btn" style="background-image: url('/lib/flags/en.svg');"></div>
                             <div class="lang__droplist js-lang-list">
                                                                     <a href="?lng=ar" style="background-image: url(/lib/flags/ar.svg);">العربية</a>
@@ -99,555 +102,145 @@
                                                                     <a href="?lng=zh" style="background-image: url(/lib/flags/zh.svg);">中文</a>
                                                             </div>
                         </div>
-                        <!-- burger-menu -->
+
                         <div class="burger-btn js-burger-btn">
                             <span class="burger-btn__line"></span>
                         </div>
+
                     </div>
-                </div>
+                </div><!-- profile-header-bottom -->
             </div>
-            <!-- time -->
-            <div class="time header__time">
+
+            <div class="profile-header__bottom">
                 <div class="container">
-                    <div class="time__inner">
-                        <div class="time__col">Start date: 2021-07-31</div>
-                        <div class="time__col">Server time: 2021-08-01 18:00:54</div>
-                        <div class="time__col time__telegram">
-                            Telegram: <a href="https://t.me/joinchat/aOPHJuDvGs42MDgy" target="_blank">The Practikantka telegram channel</a>
-                        </div>
+                    <!-- nav-menu -->
+                    <div class="profile-header__nav js-nav-menu">
+                        <ul class="profile-header__nav-list">
+                            <li>
+                                <a href="/">
+                                    Home                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="/cabinet">
+                                    My profile                                </a>
+                            </li>
+                            <li >
+                                <a href="/cabinet/createDeposit">
+                                    Make a deposit                                </a>
+                            </li>
+                            <li >
+                                <a href="/cabinet/deposits">
+                                    My deposits                                </a>
+                            </li>
+                            <li >
+                                <a href="/cabinet/payouts">
+                                    My payouts                                </a>
+                            </li>
+                        </ul>
+
+                        <button class="logout profile-header__logout js-logout mobile" type="button" data-logout-button="true">
+                            Log out                        </button>
                     </div>
                 </div>
             </div>
-            <!-- hero -->
-                            <div class="hero">
-                    <div class="container">
-                        <div class="hero__inner">
-                            <div class="hero__body">
-                                <h1 class="hero__title">DOUBLE YOUR MONEY IN 24 HOURS</h1>
-                                                                    <p class="hero__text">Please enter your address and select a payment system:</p>
-                                                                <!-- form -->
-                                                                    <form action="#" class="auth-form">
-                                        <div class="auth-form__row">
-                                            <span class="auth-form__title">Payment system</span>
-                                            <div class="currency-select currency-select_small">
-                                                <select id="currency-select" class="js-currency-select">
-                                                    <option value="Bitcoin" data-imagesrc="/lib/ps/btc.svg">Bitcoin</option>
-                                                    <option value="Dogecoin" data-imagesrc="/lib/ps/doge.svg">Dogecoin</option>
-                                                    <option value="Litecoin" data-imagesrc="/lib/ps/ltc.svg">Litecoin</option>
-                                                    <option value="Ethereum" data-imagesrc="/lib/ps/eth.svg">Ethereum</option>
-                                                    <option value="Tron" data-imagesrc="/lib/ps/trx.svg">Tron</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="auth-form__row">
-                                            <input type="text"
-                                                   name="address"
-                                                   placeholder="Your wallet"
-                                                   class="auth-form__input"
-                                            >
-                                            <button class="button button_gradient"
-                                                    type="button"
-                                                    data-login-button="true"
-                                            >
-                                                <i class="fas fa-key"></i> Log in                                            </button>
-                                        </div>
-                                    </form>
-                                                            </div>
-                            <div class="hero__img">
-                                <img src="/images/hero-img.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                    </header>
+
+        </header>
     
     <div class="page-content">
-    <div class="counters">
-        <div class="container">
-            <div class="counters__inner">
-                <div class="counter counter_accounts">
-                <span class="counter__numeral">
-                	130732 / 2820                </span>
-                    <span class="counter__title">
-                	Users / Online                </span>
-                </div>
-                <div class="counter counter_deposit">
-                    <span class="counter__numeral">43.50988814</span> <span class="counter__title">Total deposits (BTC)</span>
-                </div>
-                <div class="counter counter_payouts">
-                    <span class="counter__numeral">36.30965496</span> <span class="counter__title">Total payouts (BTC)</span>
+
+    <div class="container">
+        <!-- profile-head -->
+        <div class="profile-head">
+            <div class="profile-head__item profile-head__item_blue">
+                <span class="profile-head__amount">201.00000000 TRX</span>
+                <span class="profile-head__title">Total deposits</span>
+            </div>
+            <div class="profile-head__item profile-head__item_yellow">
+                <span class="profile-head__amount">202.00000000 TRX</span>
+                <span class="profile-head__title">Total payouts</span>
+            </div>
+            <div class="profile-head__item profile-head__item_orange">
+                <span class="profile-head__amount">0.00 TRX</span>
+                <span class="profile-head__title">Referral rewards</span>
+            </div>
+        </div><!-- profile -->
+        <div class="profile">
+            <h1 class="profile__title">Your profile</h1><!-- profile-info -->
+            <div class="profile-info">
+                <!-- profile-info-top -->
+                <div class="profile-info-top profile-info__top">
+                    <div class="profile-info-top__item">
+                        <span class="profile-info-top__title">Your address</span>
+                        <span class="profile-info-top__body">TGvfU4qV2P5n2UnXqJV2FtNdcwwBwgzp9Y</span>
+                    </div>
+                    <div class="profile-info-top__item">
+                        <span class="profile-info-top__title">Your affiliate link</span>
+                        <span id="refl" class="profile-info-top__body">https://crypto-surprice.com/?ref=25036</span>
+                    </div>
+                </div><!-- cash -->
+                <div class="cash profile-info__cash">
+                    <div class="cash__item cash__item_balance">
+                        <div class="cash__title">
+                            Total deposits                        </div>
+                        <span class="cash__amounth">201.00000000 TRX</span>
+                    </div>
+                    <div class="cash__item cash__item_dividend">
+                        <div class="cash__title">
+                            Total payouts                        </div>
+                        <span class="cash__amounth">202.00000000 TRX</span>
+                    </div>
+                    <div class="cash__item cash__item_invite">
+                        <div class="cash__title">
+                            Total referrals                        </div>
+                        <span class="cash__amounth">0</span>
+                    </div>
+                    <div class="cash__item cash__item_referral">
+                        <div class="cash__title">
+                            Referral rewards                        </div>
+                        <span class="cash__amounth">0.00 TRX</span>
+                    </div>
+                </div><!-- buttons -->
+                <div class="profile-info__buttons">
+                    <button class="button profile-info__button button_blue"
+                            type="button"
+                            data-copy-affiliate-link="true"
+                    >
+                        Copy the affiliate link                    </button>
                 </div>
             </div>
         </div>
-    </div><!-- about -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title">About company</h2>
-            </div>
-            <div class="about__inner">
-                <div class="about__body">
-                    <div class="about__story">
-                        <p>Many market participants cryptocurrency earn online trading impressive status, however, novice traders often lose. Why is this happening? What to do to obtain a guaranteed profit from trading cryptocurrencies? The first step is to find out the reasons for which are failed transaction.</p>
-                        <p>Experts in the field of cryptocurrency trading there are the following factors influencing the profitability of commercial activities: the lack of proper experience and practical skills; choosing winning trading strategy; the lack of analytical skills for proper assessment of the state of the cryptocurrency market; psychological instability to stressful situations.</p>
-                        <p>A team of qualified traders of the company Crypto-Surprice will help in a very short time to work out and resolve as the most important and least important factors hindering successful trade. With our help opportunities for stable income in an entirely new boundaries. While a handwritten trading is not mandatory.</p>
-                    </div>
-                    <div class="coins">
-                        <div class="coins__inner">
-                            <div class="coins__item"><img alt="" src="/images/bit.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/eth.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/ltc.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/dash.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/xmr.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/doge.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/usdc.svg"></div>
-                            <div class="coins__item"><img alt="" src="/images/usdt.svg"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about__img"><img alt="" src="/images/about-img.svg"></div>
-            </div>
-        </div>
-    </section><!-- statistics -->
-    <div class="features">
-        <div class="container">
-            <div class="features__inner">
-                <div class="features__item">
-                    <div class="features__img">
-                        <img alt="" src="/images/features-1.svg">
-                    </div>
-                    <div class="features__title">
-                        Affiliate programm                    </div>
-                    <p class="features__text">Get 20% of your partner's deposit to your payment address. All payments are automated.</p>
-                </div>
-                <div class="features__item">
-                    <div class="features__img"><img alt="" src="/images/features-2.svg"></div>
-                    <div class="features__title">
-                        Automatic payouts                    </div>
-                    <p class="features__text">All operations are automated. We use fast and fault-tolerant server solutions. Therefore, in our system no delays. </p>
-                </div>
-                <div class="features__item">
-                    <div class="features__img"><img alt="" src="/images/features-3.svg"></div>
-                    <div class="features__title">
-                        Professional protection                    </div>
-                    <p class="features__text">We use strong DDoS protection and a trusted SSL certificate to protect your personal information.</p>
-                </div>
+        <h1 class="profile__title" style="margin-top:35px;">Your referrals</h1>
+        <div class="profile-stat">
+            <!-- table -->
+            <div class="profile-stat-table-wrap">
+                <table class="profile-stat-table">
+                    <tbody>
+                    <tr>
+                        <th>Address</th>
+                        <th>Invested</th>
+                        <th>Your profit</th>
+                    </tr>
+                                                                                            <tr>
+                                <td>Nothing not found</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                                                                </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <section class="statistics" id="statistics">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title">Statistics of the project</h2>
-            </div>
-            <div class="stat-tabs js-tabs">
-                <div class="stat-tabs__nav">
-                    <button class="button button_white stat-tabs__btn js-tab-nav-item active">Last deposits</button>
-                    <button class="button button_white stat-tabs__btn js-tab-nav-item">Last payouts</button>
-                </div>
-                <div class="stat-tabs__panes">
-                    <!-- deposit-table -->
-                    <div class="stat-tabs__pane js-tab-pane active">
-                        <table class="stat-table">
-                                                                                        <tr>
-                                    <td>2021-08-01                                        17:59</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://www.blockchain.com/btc/tx/e88437aa304f228388470fe26fc9270c5bfe97bfdc3611b847fffd09b9d4fbc7" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    e88437aa304f228388470fe26fc927...
-                                                                                            </a>
-                                        </td>
-                                    <td>0.00024141</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:56</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/doge.svg"
-                                                title="Dogecoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://dogechain.info/tx/fae9e1e4559ee4e7cb1111a1d9b3ee12e35070982f30676b40d115a882eb5777" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    fae9e1e4559ee4e7cb1111a1d9b3ee...
-                                                                                            </a>
-                                        </td>
-                                    <td>874.72169512</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:56</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://www.blockchain.com/btc/tx/a7dd2b3d240b127b843e82a4abc2c8b6ac9e057fddcc70013af7f0efc73af99e" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    a7dd2b3d240b127b843e82a4abc2c8...
-                                                                                            </a>
-                                        </td>
-                                    <td>0.00017000</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:56</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://www.blockchain.com/btc/tx/d951a7db62a3c7febee71a3666e4c93520068fae85b9a09f5a3c894c028c0f7b" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    d951a7db62a3c7febee71a3666e4c9...
-                                                                                            </a>
-                                        </td>
-                                    <td>0.00028986</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:55</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://tronscan.org/#/transaction/7cbc9fdb17343fdf35b6fa4107e3f2c9896ee607ad6ed4b002aab0ca9d3fc936" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    7cbc9fdb17343fdf35b6fa4107e3f2...
-                                                                                            </a>
-                                        </td>
-                                    <td>100.00</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:54</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://tronscan.org/#/transaction/89245213dbc2940e1d330192b7daec42677fdf7a5919fc80b4c37792efd95604" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    89245213dbc2940e1d330192b7daec...
-                                                                                            </a>
-                                        </td>
-                                    <td>100.00</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:54</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://tronscan.org/#/transaction/c6f0b5a40ab64a6040d1fdc9c4f1bc9053ef6ca1e71a82eac36f30972f61025f" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    c6f0b5a40ab64a6040d1fdc9c4f1bc...
-                                                                                            </a>
-                                        </td>
-                                    <td>105.00</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:54</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://www.blockchain.com/btc/tx/af6e9d3b01e21aec0e7c925270f518be9b1ec1747c3fcfafef0f9fdfd5ed3e01" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    af6e9d3b01e21aec0e7c925270f518...
-                                                                                            </a>
-                                        </td>
-                                    <td>0.00024172</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:54</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://www.blockchain.com/btc/tx/de8360a16e13143602edd1739ba129865979f98407edded0ebd395c9021970f6" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    de8360a16e13143602edd1739ba129...
-                                                                                            </a>
-                                        </td>
-                                    <td>0.00024175</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:54</td>
-                                    <td>                                                                                                                                                                    <img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                                                                <a target="_blank" href="https://www.blockchain.com/btc/tx/ff52f68213847fe64707720510af4c8734cd17cd5c5e06a81a0828b734566a7d" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                                                                                                                                    ff52f68213847fe64707720510af4c...
-                                                                                            </a>
-                                        </td>
-                                    <td>0.00030000</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Active</td>
-                                </tr>
-                                                    </table>
-                    </div>
-                    <div class="stat-tabs__pane js-tab-pane">
-                        <!-- pay-table -->
-                        <table class="stat-table">
-                                                                                        <tr>
-                                    <td>2021-08-01                                        17:59</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://www.blockchain.com/btc/address/1Ci8jxjtF3CoQVkBopGKYH2Kc6gDbLqN35" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            1Ci8jxjtF3CoQVkBopGKYH2Kc6gDbLqN35                                        </a></td>
-                                    <td>0.38461503</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:56</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://www.blockchain.com/btc/address/1GK6JwpywHX96JgEzMcZgf4JH1JaPasbQS" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            1GK6JwpywHX96JgEzMcZgf4JH1JaPasbQS                                        </a></td>
-                                    <td>0.00009345</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:56</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://www.blockchain.com/btc/address/3DB7Y73Qm9btDmk4Mvcv47qSadjT9Cpxa1" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            3DB7Y73Qm9btDmk4Mvcv47qSadjT9Cpxa1                                        </a></td>
-                                    <td>0.00006000</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:59</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://tronscan.org/#/address/TEi6JS9QoBZjaK25zzb2UZNKw6fAGAKhcd" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            TEi6JS9QoBZjaK25zzb2UZNKw6fAGAKhcd                                        </a></td>
-                                    <td>210.00</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:59</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://tronscan.org/#/address/TNez1RgPVXwpi2SMPQKRgE8FYUS29gi4is" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            TNez1RgPVXwpi2SMPQKRgE8FYUS29gi4is                                        </a></td>
-                                    <td>200.00</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:59</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://tronscan.org/#/address/TEfyrDZauJxWCaZmVDkzwQowUpqv4yBqFr" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            TEfyrDZauJxWCaZmVDkzwQowUpqv4yBqFr                                        </a></td>
-                                    <td>16.56</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:59</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/trx.svg"
-                                                title="Tron" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://tronscan.org/#/address/TF6fAj2TjjPptk9cAaH9TGFV2LR9Ggq6px" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            TF6fAj2TjjPptk9cAaH9TGFV2LR9Ggq6px                                        </a></td>
-                                    <td>40.04</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:57</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/doge.svg"
-                                                title="Dogecoin" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://dogechain.info/address/DTwkGKhdawBXdnCRWiYtN7RYrhb1cvd5vf" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            DTwkGKhdawBXdnCRWiYtN7RYrhb1cvd5vf                                        </a></td>
-                                    <td>6.50295849</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:55</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://www.blockchain.com/btc/address/35bTyG8kvXTrd4fftQvVsB9hbqeb4AmBbB" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            35bTyG8kvXTrd4fftQvVsB9hbqeb4AmBbB                                        </a></td>
-                                    <td>0.00004357</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                                                            <tr>
-                                    <td>2021-08-01                                        17:55</td>
-                                    <td><img
-                                                data-placement="left"
-                                                data-toggle="tooltip"
-                                                src="/lib/ps/btc.svg"
-                                                title="Bitcoin" width="17"
-                                        >
-                                                                                <a target="_blank" href="https://www.blockchain.com/btc/address/3G4cqtU3wD1954QQ7yH6RSQTQBVHdQAyAn" style="overflow: hidden; text-overflow: ellipsis;display: inline-block;max-width: 380px;">
-                                            3G4cqtU3wD1954QQ7yH6RSQTQBVHdQAyAn                                        </a></td>
-                                    <td>0.00006000</td>
-                                    <td><i class="fas fa-check" style="color: #27ae60;"></i> Payouted</td>
-
-                                </tr>
-                            
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- faq -->
-    <section class="faq" id="faq">
-                <div class="container">
-            <div class="section-head">
-                <h2 class="section-head__title">Help</h2>
-                <p class="section-head__text">In this section You can find the most frequently asked questions.</p>
-            </div>
-            <div class="faq__accordion js-accordion">
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            What makes our service unique?                        </div>
-                        <div class="accordion-item__body">
-                            We attach great importance to transparency. In crypto-surprice.com you can track all deposits and payouts of any user in real time at any time.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            Where does the profit come from?                        </div>
-                        <div class="accordion-item__body">
-                            In crypto-surprice.com, you don't need to sign contracts or pledge your property. No creditors and no debtors. In fact, it's very simple: one user asks for help, the other helps. All profits are provided by new investments.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            How it's work?                        </div>
-                        <div class="accordion-item__body">
-                            For example, you make a deposit of 0.00005 Bitcoin and after 24 hours you will get 0.0001 Bitcoin.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            I want to start earning money. What should I do?                        </div>
-                        <div class="accordion-item__body">
-                            1. Provide us with your personal wallet to earn money.<br>2. Make a deposit for the amount you need.<br>3. Wait deposit confirmation.<br>4. After 24 hours, wait earnings on your wallet specified at the registration.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            Do you have commissions?                        </div>
-                        <div class="accordion-item__body">
-                            No, we do not charge any fees for the use of our service.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            Is your site secure from hacker attacks?                        </div>
-                        <div class="accordion-item__body">
-                            Yes, we use serious DDOS protection and a powerful server to provide you the service available at any time. SSL certificate guarantees the security of all information you enter.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            What cryptocurrencies do you support?                        </div>
-                        <div class="accordion-item__body">
-                            We support Bitcoin, Dogecoin, Litecoin, Ethereum, Tron and Perfect Money.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            When will my deposit appear on the home page?                        </div>
-                        <div class="accordion-item__body">
-                            The deposit will be created immediately after the confirmation of the transaction in the network of cryptocurrency.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            Can I make more than one deposit?                        </div>
-                        <div class="accordion-item__body">
-                            Yes, there are no limits.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            It's time for my payout. When will I get it?                        </div>
-                        <div class="accordion-item__body">
-                            Payments order is automated and takes no more than 3 hours.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            What to do if the deposit is less than the minimum amount?                        </div>
-                        <div class="accordion-item__body">
-                            Any amount less than the minimum will be considered a donation and will not be displayed as a valid deposit! The maximum amount is not limited. Please pay attention to the minimum amount for each payment system when creating a deposit.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            Do you have an affiliate program?                        </div>
-                        <div class="accordion-item__body">
-                            Yes, we give 20 percent for each deposit of your referral, depending on the amount of the deposit.                        </div>
-                    </div>
-                                    <div class="accordion-item">
-                        <div class="accordion-item__btn js-accordion-btn">
-                            How can I contact you?                        </div>
-                        <div class="accordion-item__body">
-                            If you have any questions, you can contact us at the email address listed at the bottom of the page.                        </div>
-                    </div>
-                            </div>
-        </div>
-    </section>
 </div>
 
     <!-- footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer__copy">Our e-mail address: <a style="color: #fff;" href="mailto:support@crypto-surprice.com">support@crypto-surprice.com</a></div>
+            <div class="footer__copy">Our e-mail address: <a style="color: #d97996;;" href="mailto:support@crypto-surprice.com">support@crypto-surprice.com</a></div>
             <div class="footer__copy">Copyright © 2021 Crypto-Surprice.com. All rights reserved.</div>
         </div>
     </footer>
 
 </div>
 </body>
+
+</html>
